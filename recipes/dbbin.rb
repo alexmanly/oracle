@@ -69,10 +69,6 @@ node[:oracle][:rdbms][:install_files].each do |zip_file|
     group 'oinstall'
     cwd node[:oracle][:rdbms][:install_dir]
   end
-  
-  file path do
-    action :delete
-  end
 end
 
 # This oraInst.loc specifies the standard oraInventory location.
